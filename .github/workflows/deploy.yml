@@ -54,7 +54,7 @@ jobs:
           script: |
             docker stop pessoa-exercicio
             docker rm --force pessoa-exercicio
-            docker run -d -p 8080:8081 \
+            docker run -d -p 8081:8080 \
             -e spring_profiles_active=prod \
             -e MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
             -e MYSQL_HOST=mysql \
